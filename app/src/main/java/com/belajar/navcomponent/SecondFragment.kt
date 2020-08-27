@@ -39,8 +39,14 @@ class SecondFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_second, container, false)
+
+        var input = requireArguments().getString("key")
+        binding.textView.text = input
+
         return binding.root
     }
+
+
 
     companion object {
         /**
